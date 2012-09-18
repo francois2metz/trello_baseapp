@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git://github.com/francois2metz/trello-baseapp.git"
+    "url": "git://github.com/francois2metz/trello_baseapp.git"
   },
   "dependencies": {
       "node-trello"    : "~0.0.4",
