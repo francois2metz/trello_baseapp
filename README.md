@@ -1,5 +1,59 @@
 # Trello base app
 
+Trello base app is an express squeleton to create apps on top of trello.
+
+It provides:
+* trello login
+* trello deauthorization
+* session store in redis
+* API access to trello via Backbone models
+
+## Install
+
+    npm install trello_baseapp
+
+## Usage
+
+### Get the express app
+
+To get the basic express app, you have to provide a config object:
+
+    var config = {
+      "trello": {
+        "token": {
+        "name": "Your app name",
+        "expiration": "never",
+        "scope": "read,write"
+      },
+      "key": "",
+      "secret": ""
+      }
+    };
+
+    var app = require('trello_baseapp/lib/app')(config);
+
+### Login user
+
+To log a user, redirect it to `/login`.
+
+### Using models
+
+If a user if logged-in, you can use some backbone models via the request parameter.
+
+```javascript
+app.get('/me', function(req, res) {
+    var boards = req.trello.Boards();
+    boards.fetch({
+        success: function() {
+            res.send('ok');
+        },
+        error: function() {
+            res.send('error', 500);
+        }
+    });
+});
+```
+
 ## License
 
 (c) 2012 François de Metz
