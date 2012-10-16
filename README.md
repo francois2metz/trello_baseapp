@@ -3,10 +3,12 @@
 Trello base app is an express squeleton to create apps on top of trello.
 
 It provides:
-* trello login
+
+* trello login (oauth1 authentication dance)
 * trello deauthorization
 * session store in redis
 * API access to trello via Backbone models
+* metrics on all actions
 
 ## Install
 
@@ -35,6 +37,12 @@ To get the basic express app, you have to provide a config object:
 ### Login user
 
 To log a user, redirect it to `/login`.
+
+## Deauthorize
+
+To deauthorize the application and logout the user:
+
+    DELETE /deauthorize
 
 ### Using models
 
