@@ -2,7 +2,7 @@
   "author": "François de Metz <francois@2metz.fr>",
   "name": "trello_baseapp",
   "description": "Express skeleton for creating apps on top of trello.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git://github.com/francois2metz/trello_baseapp.git"
