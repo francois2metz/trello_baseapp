@@ -38,7 +38,7 @@ To get the basic express app, you have to provide a config object:
 
 To log a user, redirect it to `/login`.
 
-## Deauthorize
+### Deauthorize
 
 To deauthorize the application and logout the user:
 
